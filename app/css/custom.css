@@ -4,3 +4,20 @@ Version: 1.0
 Template: Welcome
 */
 
+.product-view-default img {
+    border: 1px solid #ddd;
+}
+
+.view-thumbnail {
+    border: 1px solid #ddd;
+}
+
+.copyright-view p:first-of-type {
+    color: #000;
+    background-color: #F7F6F6;
+}
+
+.copyright-view p:last-of-type {
+    color: #359FD5;
+    background-color: #F7F6F6;
+}
