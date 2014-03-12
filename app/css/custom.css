@@ -25,3 +25,11 @@ Template: Welcome
 .copyright-view {
     border: 1px solid #e0e0e0;
 }
+
+.product-navigation li.nav-header {
+    min-height: 175px;
+}
+
+.cat-image {
+    min-height: 175px;
+}
