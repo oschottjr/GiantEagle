@@ -1,0 +1,55 @@
+<section class="container specform-default">
+    <productnav editvariant="true" product="Product" variant="Variant" />
+
+    <div class="col-md-4 col-collapse" ng-hide="!Variant.PreviewUrl">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <figure>
+                    <img ng-src="{{Variant.PreviewUrl}}" />
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div ng-class="{'col-xs-12 col-collapse': !Variant.PreviewUrl, 'col-md-7 col-md-offset-1 col-collapse': Variant.PreviewUrl }">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><span ng-show="Variant.PreviewUrl">Edit </span>{{Variant.ExternalID || 'Create New'}}</h3>
+            </div>
+            <div class="panel-body form-group">
+                <div class="view-form-icon">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input class="form-control" placeholder="{{Variant.Specs.Name.V01Name}}" size="{{Variant.Specs.V01Name.Width * .13}}" ng-maxlength="{{Variant.Specs.V01Name.MaxLength}}" ui-mask="{{Variant.Specs.V01Name.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.Name.Required}}" ng-model="Variant.Specs.V01Name.Value"></input>
+                    </div>
+                    <div class="input-group">
+                        <label>Title</label>
+                        <input class="form-control" placeholder="Title" size="{{Variant.Specs.V02Title1.Width * .13}}" ng-maxlength="{{Variant.Specs.V02Title1.MaxLength}}" ui-mask="{{Variant.Specs.V02Title1.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V02Title1.Required}}" ng-model="Variant.Specs.V02Title1.Value"></input>
+                    </div>
+                    <div class="input-group">
+                        <label>Address</label>
+                        <input class="form-control" placeholder="{{Variant.Specs.V04Address1.Name}}" size="{{Variant.Specs.V04Address1.Width * .13}}" ng-maxlength="{{Variant.Specs.V04Address1.MaxLength}}" ui-mask="{{Variant.Specs.V04Address1.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V04Address1.Required}}" ng-model="Variant.Specs.V04Address1.Value"></input>
+                    </div>
+                    <div class="input-group">
+                        <label>Address Line Two</label>
+                        <input class="form-control" placeholder="{{Variant.Specs.V05Address2.Name}}" size="{{Variant.Specs.V05Address2.Width * .13}}" ng-maxlength="{{Variant.Specs.V05Address2.MaxLength}}" ui-mask="{{Variant.Specs.V05Address2.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V05Address2.Required}}" ng-model="Variant.Specs.V05Address2.Value"></input>
+                    </div>
+                    <div class="input-group">
+                        <label>City, State Zip</label>
+                        <input class="form-control" placeholder="{{Variant.Specs.V07City.Name}}" size="{{Variant.Specs.V07City.Width * .13}}" ng-maxlength="{{Variant.Specs.V07City.MaxLength}}" ui-mask="{{Variant.Specs.V07City.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V07City.Required}}" ng-model="Variant.Specs.V07City.Value"></input>&nbsp;<input class="form-control" placeholder="{{Variant.Specs.V08State.Name}}" size="{{Variant.Specs.V08State.Width * .13}}" ng-maxlength="{{Variant.Specs.V08State.MaxLength}}" ui-mask="{{Variant.Specs.V08State.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V08State.Required}}" ng-model="Variant.Specs.V08State.Value"></input>&nbsp;<input class="form-control" placeholder="{{Variant.Specs.V09Zip.Name}}" size="{{Variant.Specs.V09Zip.Width * .13}}" ng-maxlength="{{Variant.Specs.V09Zip.MaxLength}}" ui-mask="{{Variant.Specs.V09Zip.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V09Zip.Required}}" ng-model="Variant.Specs.V09Zip.Value"></input>
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input class="form-control" placeholder="{{Variant.Specs.V13Email.Name}}" size="{{Variant.Specs.V13Email.Width * .13}}" ng-maxlength="{{Variant.Specs.V13Email.MaxLength}}" ui-mask="{{Variant.Specs.V13Email.MaskedInput}}" type="text" autocomplete="off" ng-required="{{Variant.Specs.V13Email.Required}}" ng-model="Variant.Specs.V13Email.Value"></input>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button class="btn btn-primary pull-right" type="submit" ng-click="save()">Save</button>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+
+
+
